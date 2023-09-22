@@ -21,12 +21,12 @@ const Stack = createNativeStackNavigator();
 
 export default function NavigationRouter() {
 
-  return (
-    <NavigationContainer theme={theme}>
-        <Stack.Navigator screenOptions={stackOption}>
-            <Stack.Screen name="welcome" component={Welcome} />
-            <Stack.Screen name="home" component={Home} />
-        </Stack.Navigator>
-    </NavigationContainer>
-  )
+    return (
+        <NavigationContainer theme={theme}>
+            <Stack.Navigator screenOptions={stackOption}>
+                <Stack.Screen name="welcome" component={Welcome} />
+                <Stack.Screen name="home" component={Home} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    )
 }
