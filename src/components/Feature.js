@@ -30,7 +30,7 @@ export default function Features({ key, color }) {
                 )
             })
         }
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("home")}>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("message")}>
                 <Text style={styles.buttonText}>Ready !</Text>
             </TouchableOpacity>
         </>

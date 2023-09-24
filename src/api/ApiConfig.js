@@ -1,7 +1,7 @@
 import axios from "axios";
 import { GPT_API_KEY } from './Key';
 
-const chatgptUrl = 'https://api.openai.com/v1/chat/completions';
+const chatgptUrl = 'https://api.openai.com/v1/chat';
 
 const instance = axios.create({
     baseURL: chatgptUrl,
@@ -12,15 +12,15 @@ const instance = axios.create({
     }
 });
 
-export const chatgptApiCall = async (prompt, messages) => {
+export const chatgptApiCall = async (uri, messages) => {
     try{
-        const res = await instance.post(chatgptUrl, {
+        const res = await instance.post(uri, {
             model: "gpt-3.5-turbo",
             messages
         })
 
         let answer = res.data?.choices[0]?.message?.content;
-        messages.push({role: 'assistant', content: answer.trim()});
+        messages.push({role: 'assistant', content: answer});
         // console.log('got chat response', answer);
         return Promise.resolve({success: true, data: messages}); 
 

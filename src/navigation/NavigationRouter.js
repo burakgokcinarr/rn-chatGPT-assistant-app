@@ -2,7 +2,7 @@ import React from 'react'
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Color } from '../constants';
-import { Welcome, Home } from '../screens'
+import { Welcome, Home, Message } from '../screens'
 
 const theme = {
     ...DefaultTheme,
@@ -26,6 +26,7 @@ export default function NavigationRouter() {
             <Stack.Navigator screenOptions={stackOption}>
                 <Stack.Screen name="welcome" component={Welcome} />
                 <Stack.Screen name="home" component={Home} />
+                <Stack.Screen name="message" component={Message} />
             </Stack.Navigator>
         </NavigationContainer>
     )
