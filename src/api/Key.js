@@ -1,1 +1,1 @@
-export const GPT_API_KEY = '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';
+export const GPT_API_KEY = '<YOUR_KEY>';
